@@ -1,7 +1,7 @@
 
 
 /* ========= PRODUCT INFORMATION  =========== */
-#define FW_REVISION 3
+#define FW_REVISION 4
 #define FW_NAME "ESP8266 AnalogRead Multiple sensors"
 /* -------------------- */
 
@@ -45,9 +45,10 @@ void loop() {
    Serial.print(" => ");
   Serial.print(analogValue1*V_ADC_STEP);
   Serial.println(" V");
-  delay(10);
-  Serial.print("AnalogRead Sensor2: ");
   delay(1000);
+
+
+  Serial.print("AnalogRead Sensor2: ");
   digitalWrite(D7,LOW);
   digitalWrite(D8,HIGH);
   analogValue2 = analogRead(A0);
